@@ -15,23 +15,61 @@
                <form action="{% url 'aabook' %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
         <div class="form-group">
-                <div class="col"><input type="text" class="form-control" name="title" placeholder="Book Title" required="required"></div>
+                <div class="col">
+                    <p> BOOK TITLE</p>
+                    <input type="text" class="form-control" name="title" placeholder="Book Title" required="required"></div>
         </div>
         <div class="form-group">
-                <div class="col"><input type="text" class="form-control" name="author" placeholder="Author" required="required"></div>                 
+            
+                <div class="col">
+                    <P> AUTHOR OF THE BOOK</P>
+                    <input type="text" class="form-control" name="author" placeholder="Author" required="required"></div>                 
         </div>
 
          <div class="form-group">
-                <div class="col"><input type="text" class="form-control" name="publisher" placeholder="Publisher" required="required"></div>
+
+                <div class="col">
+                    <P>
+                        PUBLISHER OF THE BOOK
+                    </P><input type="text" class="form-control" name="publisher" placeholder="Publisher" required="required"></div>
         </div>
 
         <div class="form-group">
-                <div class="col"><input type="text" class="form-control" name="year" placeholder="Publication Year" required="required"></div>
+                <div class="col">
+                    <P> PUBLICATION OF THE YEAR </P>
+                <select name="year" id="year">
+                    <option value="2009">2009</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2010">2010</option>
+                  </select>
+                </div>
         </div>
 
       <div class="form-group">
-                <div class="col"><input type="text" class="form-control" name="desc" placeholder="Book Description" required="required"></div>
+                <div class="col">
+                
+                <p> GENRE OF THE BOOK IS BASED ON</p>
+                <input type="checkbox" id="desc" name="desc" value="Horror">
+                    <label for="vehicle"> Horror genre</label><br>
+                <input type="checkbox" id="desc" name="desc" value="Fiction">
+                    <label for="vehicle"> Fiction genre</label><br>
+                <input type="checkbox" id="desc" name="desc" value="Education">
+                    <label for="vehicle"> Education Genre</label><br>
+                </div>
         </div>
+
+        <div class="form-group">
+            <div class="col">
+            
+            <p> DO YOU RECOMMED THIS BOOK? </p>
+            <input type="radio" id="recommend" name="value" value="recommend">
+                <label for="recommend">I recommend this Book</label><br>
+            <input type="radio" id="notrecommend" name="value" value="notrecommend">
+                <label for="notrecommend">I dont recommend this Book</label><br>
+            <input type="radio" id="other" name="value" value="other">
+                <label for="other">Other</label><br>
+    </div>
 
 
         <div class="form-group">
