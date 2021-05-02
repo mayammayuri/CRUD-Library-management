@@ -92,34 +92,18 @@
 <!-- Sidebar -->
 <ul class="sidebar navbar-nav">
 
-    <li class="nav-item active">
-        <a class="nav-link" href="{% url 'dashboard' %}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Admin Dashboard</span>
-        </a>
-    </li>
+    
     <li class="nav-item active">
         <a class="nav-link" href="">
             <i class="fas fa-user-circle fa-fw text-warning"></i>
             <span style="color: yellow">Logged As {{ user.username }}</span>
         </a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'alchat' %}">
-            <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Group Chat</span>
-        </a>
-    </li>
+    
         <li class="nav-item">
         <a class="nav-link" href="{% url 'aabook_form' %}">
             <i class="fas fa-book text-primary"></i>
             <span style="color: white">Add Book</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'albook' %}">
-            <i class="fas fa-book text-primary"></i>
-            <span style="color: white">Recent Added Books</span>
         </a>
     </li>
 
@@ -133,12 +117,6 @@
         <a class="nav-link" href="{% url 'adrequest' %}">
             <i class="fas fa-book text-primary"></i>
             <span style="color: white">Delete Request</span>
-        </a>
-    </li>
-     <li class="nav-item">
-        <a class="nav-link" href="{% url 'afeedback' %}">
-            <i class="fas fa-book text-primary"></i>
-            <span style="color: white">User Feedback</span>
         </a>
     </li>
      <li class="nav-item">
