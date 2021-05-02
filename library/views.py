@@ -3,12 +3,12 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views import generic
 from bootstrap_modal_forms.mixins import PassRequestMixin
-from bookstore.models import User, Book, Chat, DeleteRequest, Feedback
+from library.models import User, Book, Chat, DeleteRequest, Feedback
 from django.contrib import messages
 from django.db.models import Sum
 from django.views.generic import CreateView, DetailView, DeleteView, UpdateView, ListView
-from bookstore.forms import ChatForm, BookForm, UserForm
-from bookstore import models
+from library.forms import ChatForm, BookForm, UserForm
+from library import models
 import operator
 import itertools
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -25,7 +25,7 @@ from django.views import View
 # Shared Views
 class login(View):
 	def login_form(self,request):
-		return render(request, 'bookstore/login.html')
+		return render(request, 'library/login.html')
 
 	def logoutView(self,request):
 		logout(request)
@@ -51,7 +51,7 @@ class login(View):
 
 class Register(View):
 	def register_form(self,request):
-		return render(request, 'bookstore/register.html')
+		return render(request, 'library/register.html')
 
 
 	def registerView(self,request):

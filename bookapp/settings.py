@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookstore',
+    'library',
     'bootstrap_modal_forms',
     'widget_tweaks',
     'bootstrap3',
@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'bookapp.urls'
+ROOT_URLCONF = 'myapp.urls'
 
 TEMPLATES = [
     {
@@ -65,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'bookapp.wsgi.application'
+WSGI_APPLICATION = 'myapp.wsgi.application'
 
 
 # Database
@@ -120,7 +120,7 @@ STATIC_URL = '/static/'
 
 
 STATIC_URL = '/static/'
-AUTH_USER_MODEL = 'bookstore.User'
+AUTH_USER_MODEL = 'library.User'
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

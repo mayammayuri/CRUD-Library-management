@@ -28,8 +28,8 @@ class Book(models.Model):
     desc = models.CharField(max_length=1000)
     uploaded_by = models.CharField(max_length=100, null=True, blank=True)
     user_id = models.CharField(max_length=100, null=True, blank=True)
-    pdf = models.FileField(upload_to='bookapp/pdfs/')
-    cover = models.ImageField(upload_to='bookapp/covers/', null=True, blank=True)
+    pdf = models.FileField(upload_to='myapp/pdfs/')
+    cover = models.ImageField(upload_to='myapp/covers/', null=True, blank=True)
 
     def __str__(self):
         return self.title
